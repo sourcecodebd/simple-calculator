@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Icon -->
+    <link rel="icon" href="media/icons/dp.ico" type="image/x-icon" sizes="256x256">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5485bfc962.js" crossorigin="anonymous"></script>
+    <!-- Tailwind CSS -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <header class="flex justify-center text-center">
+        <h1 class="text-4xl text-blue-600 font-semibold my-5">A Simple Calculator</h1>
+    </header>
+    <main>
+        <section class="flex flex-col items-center">
+            <div class="rounded-2xl shadow-2xl w-3/4 md:w-3/4 lg:w-3/4 xl:w-3/4">
+                <h1 id="input-field"
+                    class="rounded-t-2xl text-indigo-50 bg-black h-24 sm:h-44 md:h-44 text-3xl sm:text-4xl md:text-7xl lg:text-7xl xl:text-6xl flex justify-end items-center p-8">
+                    <input id="input" type="text" class="bg-black p-5 placeholder-white w-full tracking-widest"
+                        placeholder="0">
+                </h1>
+                <div id="typing-field"
+                    class="rounded-b-2xl text-black text-2xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-4xl">
+                    <div id="buttons" class="grid grid-cols-4 gap-0.5 bg-black">
+                        <button id="AC"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-100 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>AC</button>
+                        <button id="ON"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-100 border-black border-8 flex justify-center items-center font-semibold">ON</button>
+                        <button value="%" id="%"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-100 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>%</button>
+                        <button value="/" id="/"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 text-white bg-blue-500 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>/</button>
+                        <button value="7" id="7"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-300 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>7</button>
+                        <button value="8" id="8"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-300 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>8</button>
+                        <button value="9" id="9"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-300 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>9</button>
+                        <button value="*" id="X"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 text-white bg-blue-500 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>X</button>
+                        <button value="4" id="4"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-300 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>4</button>
+                        <button value="5" id="5"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-300 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>5</button>
+                        <button value="6" id="6"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-300 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>6</button>
+                        <button value="-" id="-"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 text-white bg-blue-500 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>-</button>
+                        <button value="1" id="1"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-300 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>1</button>
+                        <button value="2" id="2"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-300 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>2</button>
+                        <button value="3" id="3"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-300 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>3</button>
+                        <button value="+" id="+"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 text-white bg-blue-500 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>+</button>
+                        <button value="0" id="0"
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-300 border-black border-8 col-span-2 flex justify-center items-center font-semibold"
+                            disabled>0</button>
+                        <button value="." id="."
+                            class="types px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 bg-gray-300 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>.</button>
+                        <button value="=" id="eql"
+                            class="px-8 h-14 md:px-16 md:h-24 lg:px-24 lg:h-24 xl:px-30 xl:h-40 text-white bg-blue-500 border-black border-8 flex justify-center items-center font-semibold"
+                            disabled>=</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="calculator.js"></script>
+    </main>
+    <footer class="text-center text-1xl md:text-1xl lg:text-1xl xl:text-1xl text-black font-semibold my-12">
+        <p>Copyright &copy; 2021 | All Rights Reserved By</p>
+        <p><span class="text-blue-600">Nafi Mahmud</span></p>
+    </footer>
+</body>
+
+</html>
