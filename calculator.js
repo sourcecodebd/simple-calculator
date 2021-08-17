@@ -27,6 +27,9 @@ eql.addEventListener('click', function () {
     const result = eval(inputField.innerText);
     console.log(result);
     inputField.innerText = result;
+    if (result == undefined) {
+        inputField.innerText = '';
+    }
 });
 
 input.addEventListener('keypress', function (e) {
